@@ -37,7 +37,7 @@ block content
   p Welcome to #{__("Hello")}
 ```
 ##About
-I've tried i18n and i18-n, but neither seem to show an example for Express 4 that works
+I've tried i18n and i18n-2, but neither seem to show an example for Express 4 that works
 out right out the box with a simple syntax to access the files with translations using Jade. So I
 decided to create one that will work my projects.
 
