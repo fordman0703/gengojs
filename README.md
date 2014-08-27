@@ -4,6 +4,12 @@ gengojs
 An uber basic and simple i18n library for Express 4
 
 ##Usage
+
+###npm
+```bash
+sudo npm install gengojs
+```
+
 ### In app.js
 ```js
 //require
