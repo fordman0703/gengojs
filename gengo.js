@@ -40,7 +40,7 @@
             debug: false,
             //supported locales
             supported: ['en_US', 'en'],
-            default: 'en',
+            default: 'en_US',
             viewAware: false,
             views: {
                 '/': 'index'
