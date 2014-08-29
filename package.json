@@ -1,27 +1,29 @@
 {
-  "name": "gengojs",
-  "version": "0.0.3",
-  "description": "An uber basic and simple i18n library for Express 4",
-  "main": "gengo.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "app-root-path": "^0.1.0",
-    "locale": "0.0.17",
-    "sprintf-js": "0.0.7"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/iwatakeshi/gengojs.git"
-  },
-  "keywords": [
-    "i18n"
-  ],
-  "author": "iwatakeshi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/iwatakeshi/gengojs/issues"
-  },
-  "homepage": "https://github.com/iwatakeshi/gengojs"
+    "name": "gengojs",
+    "version": "0.0.3",
+    "description": "An uber basic and simple i18n library for Express 4",
+    "main": "gengo.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "app-root-path": "^0.1.0",
+        "locale": "0.0.17",
+        "sprintf-js": "0.0.7"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/iwatakeshi/gengojs.git"
+    },
+    "keywords": [
+        "i18n",
+        "translate",
+        "gengo"
+    ],
+    "author": "iwatakeshi",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/iwatakeshi/gengojs/issues"
+    },
+    "homepage": "https://github.com/iwatakeshi/gengojs"
 }
