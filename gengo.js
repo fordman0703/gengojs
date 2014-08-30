@@ -4,7 +4,7 @@
 /*global module, $, console*/
 /*
  * gengojs
- * version : 0.0.3
+ * version : 0.1.7
  * author : Takeshi Iwana
  * https://github.com/iwatakeshi
  * license : MIT
