@@ -49,7 +49,7 @@
         vsprintf = require("sprintf-js").vsprintf,
         // check for nodeJS
         hasModule = (typeof module !== 'undefined' && module.exports),
-        VERSION = '0.1.3',
+        VERSION = '0.1.5',
         //configuration with defaults set
         CONFIG = {
             //path to locales
@@ -191,7 +191,7 @@
             debug('fn: loadLocale, In BESTMATCH');
             LOCALE = require(CONFIG.localePath + LOCALES.gengo[BESTMATCH] + '.js');
             loadMoment(LOCALES.moment[BESTMATCH]);
-            loadNumeral(LOCALEs.numeral[BESTMATCH]);
+            loadNumeral(LOCALES.numeral[BESTMATCH]);
         }
 
         if (LOCALE) {
