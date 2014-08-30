@@ -9,6 +9,8 @@
   "dependencies": {
     "app-root-path": "^0.1.0",
     "locale": "0.0.17",
+    "moment": "^2.8.2",
+    "numeral": "^1.5.3",
     "sprintf-js": "0.0.7"
   },
   "repository": {
