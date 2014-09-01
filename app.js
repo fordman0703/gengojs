@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 gengo.config({
-    debug: true,
+    debug: false,
     default: 'en_US',
     supported: ['en_US', 'ja'],
     universe: true,

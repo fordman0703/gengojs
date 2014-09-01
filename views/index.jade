@@ -4,6 +4,7 @@ block styles
     link(rel="stylesheet" href="codemirror/lib/codemirror.css")
     link(rel="stylesheet" href="codemirror/theme/neo.css")
     link(rel="stylesheet" href="codemirror/theme/monokai.css")
+    link(rel="stylesheet" href="stylesheets/index.css")
 block content
   include universal/navbar
   .jumbotron
@@ -11,10 +12,10 @@ block content
       .col-md-7
         h1=title
       .col-md-5
-          form(style="padding-top: 50px;")
-            h3= __("Install")
-            textarea#code-gengo-npm(name="code").
-              sudo npm install gengojs --save #npm
+        form
+          h3= __("Install")
+          textarea#code-gengo-npm(name="code").
+            sudo npm install gengojs --save #npm
       .col-md-7
          p
          | #{__("An uber basic and simple i18n library for Express 4")}

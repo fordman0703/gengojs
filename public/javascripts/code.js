@@ -7,8 +7,6 @@ var gengo_npm = CodeMirror.fromTextArea(document.getElementById('code-gengo-npm'
     readOnly: true
 });
 
-gengo_npm.setSize(400, 50);
-
 //initialize code mirror for #code-gengo-init
 var gengo_init = CodeMirror.fromTextArea(document.getElementById('code-gengo-init'), {
     mode: {
