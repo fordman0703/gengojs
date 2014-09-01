@@ -24,7 +24,7 @@ module.exports = {
         "Templates": "テンプレーツ",
         "It's uber easy to use gengo in your template of choice. Since gengo is a global variable, it's as easy as calling it with a simple syntax.": "gengoをあなたの好きなテンプレートで使うのはチョウかんたんです。gengoの存在はグローバルなのでシンプルなシンタックスで使えます。",
         "Note that only Jade has been tested but it should work with others.": "ジェードしかテストされていませんが他のテンプレートにでも使えるはずです。",
-        "Final step to Gengo.": "ゲンコへのファイナルステップ。",
+        "Final step to Gengo.": "ゲンゴへのファイナルステップ。",
         "Dictionaries.": "辞書",
         "This step is uber easy to setup your dictionaries.": "辞書のセットアップはチョウ簡単です。",
         "There are two options when setting up your dictionaries:": "辞書のセットアップには二つの選択が有ります。",
