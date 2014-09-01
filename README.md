@@ -1,5 +1,22 @@
 Gengo.js
 ========
+
+##Help needed!!
+First, I want to thank those who downloaded and tried gengo. gengo has a lot of room to grow but is really limited without your help. gengo now has a new site and is available at [gengojs.com](http://www.gengojs.com), but needs your help to improve it
+in means of translations and of course gengo itself. So, please visit the Github page and fork away gengo and the site!
+
+##Change Log
+Quite sinful, but starting the log from 0.1.10
+
+**0.1.10**
+
+* Fixed issues with boolean values. Using isDefined should help figuring out whether COOKIELOCALE is set (well I hope).
+* Added new functions to expose the current language and current locale. (not in the wiki yet)
+* Seperated redundant calls to a function when setting current locales and language.
+* Made gengo a bit more modular by creating more functions to clean up clutter.
+* Added new universe option which allows you to use definitions on all routes. (not in the wiki yet)
+
+
 ##QA
 
 ###What is Gengo.js?
