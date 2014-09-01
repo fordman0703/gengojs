@@ -1,0 +1,21 @@
+.navbar.navbar-default
+  .navbar-header
+    button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-responsive-collapse")
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    a.navbar-brand(href="/") #{title}
+  .navbar-collapse.collapse.navbar-responsive-collapse
+    ul.nav.navbar-nav
+      li
+        a(href="/") #{__("Home")}
+      li
+        a(href="#") #{__("Config")}
+    ul.nav.navbar-nav.navbar-right
+      li
+        form.navbar-form.navbar-left
+          input.form-control.col-lg-8.language(type="text", placeholder="Search Language", autocomplete="off")
+      li
+        a.current-language=__(language)
+      li
+        a(href="//github.com/iwatakeshi/gengojs", target="__blank") #{__("Fork on GitHub")}

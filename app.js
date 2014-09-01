@@ -4,7 +4,7 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var gengo = require('gengojs');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -19,8 +19,23 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+gengo.config({
+    debug: true,
+    default: 'en_US',
+    supported: ['en_US', 'ja'],
+    universe: true,
+    viewAware: true
+});
+app.use(function(req, res, next) {
+    res.locals.footer = {
+        twitter: "#[a(href='google.com') Google]"
+    };
+    next();
+});
+gengo.init(app);
 app.use('/', routes);
 app.use('/users', users);
 

@@ -1,5 +1,134 @@
 extends layout
 
+block styles
+    link(rel="stylesheet" href="codemirror/lib/codemirror.css")
+    link(rel="stylesheet" href="codemirror/theme/neo.css")
+    link(rel="stylesheet" href="codemirror/theme/monokai.css")
 block content
-  h1= title
-  p Welcome to #{title}
+  include universal/navbar
+  .jumbotron
+    .row
+      .col-md-7
+        h1=title
+      .col-md-5
+          form(style="padding-top: 50px;")
+            h3= __("Install")
+            textarea#code-gengo-npm(name="code").
+              sudo npm install gengojs --save #npm
+      .col-md-7
+         p
+         | #{__("An uber basic and simple i18n library for Express 4")}
+         p(style="padding-top: 15px;")
+           a.btn.btn-primary.btn-sm(href="#one") #{__("Learn more")}
+
+  .container
+  hr.featurette-divider
+  .row.featurette
+    .col-md-7
+      h2.featurette-heading#one
+        | #{__("First step to Uberness.")}
+        span.text-muted #{__("Initialize")}
+      p.lead
+        | #{__("Gengo.js makes it easy to initialize and hot swap your pages with 3 simple steps:")} <br/> #{__("Set. Configure. Initialize.")}
+        p.text-muted #{__("Note that configuring gengo is optional, see Config.")}
+    .col-md-5
+        form
+          textarea#code-gengo-init(name="init").
+            /*app.js*/
+
+            // 1. #{__("Get an instance of gengo")}
+            var gengo = require('gengojs');
+
+            // 2. #{__("Configure gengo")}
+            gengo.config({
+                debug: false,
+                localePath: '#{__("Your locale folder")}',
+                default: 'en_US',
+                supported: ['ja','en_US']
+            });
+
+            // 3. #{__("Initialize gengo")}
+            gengo.init(app);
+  hr.featurette-divider
+  .row.featurette
+    .col-md-5
+      form
+        textarea#code-gengo-template(name="templ").
+          //#{__("Simple sytnax to use gengo: '__'")}
+
+          extends layout
+
+          block content
+            h1= __(title)
+            p \#{__("Welcome to Gengo.js")}
+
+            //#{__("live output:")}
+            //#{__("Welcome to Gengo.js")}
+
+
+    .col-md-7
+      h2.featurette-heading#two
+        | #{__("Second step to Gengoify.")}
+        span.text-muted #{__("Templates")}
+      p.lead
+        | #{__("It's uber easy to use gengo in your template of choice. Since gengo is a global variable, it's as easy as calling it with a simple syntax.")}
+        p.text-muted #{__("Note that only Jade has been tested but it should work with others.")}
+  hr.featurette-divider
+  .row.featurette
+    .col-md-7
+      h2.featurette-heading#three
+        | #{__("Final step to Gengo.")}
+        span.text-muted #{__("Dictionaries.")}
+      p.lead
+        | #{__("This step is uber easy to setup your dictionaries.")}
+        | #{__("There are two options when setting up your dictionaries:")}
+        ul.lead
+            li #{__("Have gengo directly access your definitions.")}
+            li #{__("Have gengo access your definitions by route.")}
+    .col-md-5
+      form
+        textarea#code-gengo-dict(name="dict").
+            //ja.js
+
+            //#{__("Really simple, gengo will just get what you have")}
+            module.exports = {
+                "Welcome to Gengo.js": "Gengo.jsへようこそ",
+            };
+
+            //#{__("With viewAware: true")}
+            module.exports = {
+                index:{
+                    "Welcome to Gengo.js": "Gengo.jsへようこそ",
+                }
+            }
+  hr.featurette-divider
+  .row.featurette
+    .col-md-5
+      form
+        textarea#code-gengo-moment-numeral(name="momnum").
+            extends layout
+
+            block content
+                h4 \#{__('Today is %s.', moment().format('dddd'))}
+                h4 \#{__('I don\'t have %s', numeral(10000).format('$0,0.00'))}
+
+                //#{__("live output:")}
+                //#{__('Today is %s.', moment().format('dddd'))}
+                //#{__('I don\'t have %s', numeral(10000).format('$0,0.00'))}
+    .col-md-7
+      h2.featurette-heading#two
+        | #{__("And a little bit of Extra.")}
+        span.text-muted #{__("Moment.js and Numeral.js")}
+      p.lead
+        | #{__("Love using these libraries? Rest assured, both are built into gengo and are easily accessible.")}
+  hr.featurette-divider
+
+
+block scripts
+    script(src="codemirror/lib/codemirror.js")
+    script(src="codemirror/mode/css/css.js")
+    script(src="codemirror/mode/javascript/javascript.js")
+    script(src="codemirror/mode/htmlmixed/htmlmixed.js")
+    script(src="codemirror/mode/jade/jade.js")
+    script(src="codemirror/mode/shell/shell.js")
+    script(src="javascripts/code.js")
